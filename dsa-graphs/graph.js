@@ -29,13 +29,29 @@ class Graph {
   }
 
   // this function accepts two vertices and updates their adjacent values to remove the other vertex
-  removeEdge(v1, v2) {}
+  removeEdge(v1, v2) {
+    for (let node of this.nodes) {
+      if (node.ajacent.has(vertex)) {
+        node.adjacent.delete(vertex);
+      }
+    }
+    this.nodes.delete(vertex);
+  }
 
   // this function accepts a vertex and removes it from the nodes property, it also updates any adjacency lists that include that vertex
-  removeVertex(vertex) {}
+  removeVertex(vertex) {
+    for (let node of this.nodes) {
+      if (node.adjacent.has(vertex)) {
+        node.adjacent.delete(vertex);
+      }
+    }
+    this.nodes.delete(vertex);
+  }
 
   // this function returns an array of Node values using DFS
-  depthFirstSearch(start) {}
+  depthFirstSearch(start) {
+    
+  }
 
   // this function returns an array of Node values using BFS
   breadthFirstSearch(start) {}
