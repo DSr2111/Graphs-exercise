@@ -65,6 +65,9 @@ class Graph {
         }
       });
     }
+    traverse(start);
+
+    return result;
   }
 
   // this function returns an array of Node values using BFS
